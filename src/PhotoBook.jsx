@@ -14,7 +14,7 @@ function BookLeaf({ mode, entry, side, page, total }) {
   return (
     <div className={`bookLeaf ${mode} ${side}`}>
       {side === 'left'
-        ? <div className="photoMat"><img src={`/assets/photography/${entry[0]}`} alt={entry[2]} /></div>
+        ? <div className="photoMat"><img src={`${import.meta.env.BASE_URL}assets/photography/${entry[0]}`} alt={entry[2]} /></div>
         : <PageCopy entry={entry} page={page} total={total} />}
     </div>
   )
